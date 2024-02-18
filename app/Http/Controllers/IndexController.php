@@ -6,8 +6,15 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-    public function __invoke()
+    public function index()
     {
-        return view('index', ['name' => 'me']);
+        $site_settings = [
+            'title' => setting('site.title'),
+            'description' => setting('site.description')
+        ];
+
+        return view('home', [
+            'site_settings' => $site_settings
+        ]);
     }
 }

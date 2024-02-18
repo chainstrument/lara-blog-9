@@ -23,7 +23,8 @@ Route::get('/', function () {
     return 'Hello, World!';
 }); */
 
-Route::get('/', IndexController::class);
+Route::get('/', [IndexController::class, 'index']);
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
