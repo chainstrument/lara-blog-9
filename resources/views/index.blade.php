@@ -9,5 +9,7 @@
 @endsection
 
 @section('content')
-    <p>Corps du contenu.</p>
+    <p>Corps du contenu. </p>
+    <p>Bonjour, {{ $name }}.</p>
+
 @endsection
