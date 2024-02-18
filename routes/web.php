@@ -23,4 +23,4 @@ Route::get('/', function () {
     return 'Hello, World!';
 }); */
 
-Route::get('/', [IndexController::class, 'index']);
+Route::get('/', IndexController::class);
